@@ -236,13 +236,14 @@ def metric_card(label: str, value: str, note: str) -> None:
 def load_model(model_path: str):
     if YOLO is None:
         raise RuntimeError(
-            "Ultralytics is not installed. Install it with: pip install ultralytics"
+            f"YOLO import failed: {YOLO_IMPORT_ERROR}"
         )
+
     if not Path(model_path).is_file():
         raise FileNotFoundError(
-            f"Model file not found: {model_path}. Put your trained .pt file in the project "
-            "folder or change the model path in the sidebar."
+            f"Model file not found: {model_path}"
         )
+
     return YOLO(model_path)
 
 
