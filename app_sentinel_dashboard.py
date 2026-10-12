@@ -21,8 +21,13 @@ except Exception:
 # Optional: the app can start without Ultralytics installed.
 try:
     from ultralytics import YOLO
-except Exception:
+    YOLO_IMPORT_ERROR = None
+except Exception as e:
     YOLO = None
+    YOLO_IMPORT_ERROR = repr(e)
+
+if YOLO is None:
+    st.error(f"YOLO import failed: {YOLO_IMPORT_ERROR}")
 
 
 # ---------------------------------------------------------------------
