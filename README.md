@@ -1,5 +1,7 @@
 # Sentinel AI — Fire & Smoke Detection System
 
+![Sentinel AI Dashboard](dashboard.png)
+
 ## 📌 Project Overview
 
 Sentinel AI is a computer vision application designed to detect fire and smoke in images and videos using YOLOv8. The application provides an interactive dashboard built with Streamlit to make detection results easier to review.
